@@ -1,0 +1,61 @@
+
+
+.streamers-wrapper {
+	width: 100%;
+	margin-bottom: 10px;
+	border-top: 1px solid #333;
+}
+
+
+
+.flex-container {
+  
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.flex-item {
+	padding: 0;
+	width: 320px;
+	height: 180px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.channel-cell {
+	position: relative;
+	width: 320px;
+	height: 180px;
+}
+
+.preview-image {
+	width: 320px;
+	height: 180px;
+}
+
+.channel-info {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 320px;
+	height: 70px;
+	z-index: 5;
+	background: rgba(0, 0, 0, 0.5);
+	font-size: 14px;
+}
+
+.channel-logo {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 60px;
+	height: 60px;
+}
