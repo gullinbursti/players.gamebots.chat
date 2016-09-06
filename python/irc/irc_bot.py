@@ -7,6 +7,8 @@ IRC_SERVER = 'irc.chat.twitch.tv'
 IRC_PORT = 6667
 BUFFER_SIZE = 4096
 
+IRC_MESSAGE = "You have been requested for {game_name} help inside GameBots"
+
 
 def connect_server():
   try:
@@ -83,7 +85,7 @@ while "PART" not in messages:
 
   #-- deliver message after getting names list
   if len(messages) >= 2 and messages[-2] == "/NAMES":
-    send_message(sys.argv[3], "does anyone want to mod a game help chat channel with? i am doing an {game_name} channel in gamebots on kik".format(game_name=sys.argv[4].lower()))
+    send_message(sys.argv[3], IRC_MESSAGE.format(game_name=sys.argv[4].lower()))
     time.sleep(1)
     timestamp = int(time.time())
     send_command("PING %d" % (timestamp))
